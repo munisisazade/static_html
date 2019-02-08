@@ -16,10 +16,6 @@ services:
       - .:/code
     ports:
       - "8050:8050"
-    links:
-      - postgres
-    depends_on:
-      - "postgres"
 
 networks:
   default:
