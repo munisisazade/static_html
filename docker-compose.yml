@@ -6,7 +6,6 @@ services:
     container_name: ismayil
     build: .
     restart: "always"
-    env_file: .env
     environment:
       - VIRTUAL_HOST=kanankhalilov.com
       - VIRTUAL_PORT=8050
