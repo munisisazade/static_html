@@ -1,0 +1,19 @@
+version: "3"
+
+
+services:
+  static:
+    build: .
+    container_name: static-web
+    ports:
+      - 8050:80
+    volumes:
+      - ./:/code/
+    environment:
+      - VIRTUAL_HOST=kanankhalilov.com
+      - VIRTUAL_PORT=8050
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
